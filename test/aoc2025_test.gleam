@@ -2,6 +2,7 @@ import day1_2
 
 //import day2_1
 import day3_1
+import day3_2
 import gleeunit
 
 pub fn main() -> Nil {
@@ -53,4 +54,11 @@ pub fn day3_1_test() {
   assert day3_1.calculate_row("811111111111119") == 89
   assert day3_1.calculate_row("234234234234278") == 78
   assert day3_1.calculate_row("818181911112111") == 92
+}
+
+pub fn day3_2_test() {
+  assert day3_2.calculate_row("987654321111111") == 987_654_321_111
+  assert day3_2.calculate_row("811111111111119") == 811_111_111_119
+  assert day3_2.calculate_row("234234234234278") == 434_234_234_278
+  assert day3_2.calculate_row("818181911112111") == 888_911_112_111
 }
