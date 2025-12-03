@@ -51,7 +51,9 @@ fn check_range_group(left: String, right: String) -> Int {
 
 fn calc_lem(lem: Int, acc: Int, upper_limit: Int) -> Int {
   case lem >= upper_limit {
-    True -> acc
+    True -> {
+      acc
+    }
     False -> {
       let len = num_digits(lem)
       let half_len = len / 2
@@ -66,8 +68,9 @@ fn calc_lem(lem: Int, acc: Int, upper_limit: Int) -> Int {
           #(lower, upper)
           |> fn(p) {
             case p {
-              #(a, b) if a == b && a != 0 ->
+              #(a, b) if a == b && a != 0 -> {
                 calc_lem(lem + 1, acc + lem, upper_limit)
+              }
               _ -> calc_lem(lem + 1, acc, upper_limit)
             }
           }
