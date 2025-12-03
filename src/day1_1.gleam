@@ -12,7 +12,7 @@ pub fn main() -> Nil {
 
 fn solve(path) {
   let res =
-    load_file(path)
+    load_file(path, [])
     |> result.map(list.flatten)
     |> result.map(calculate)
 
