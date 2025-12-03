@@ -7,7 +7,7 @@ import gleam/result
 import gleam/string
 
 pub fn main() -> Nil {
-  //solve("./data/day2_ex1.txt")
+  solve("./data/day2_ex1.txt")
   solve("./data/day2_1.txt")
 }
 
